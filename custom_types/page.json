@@ -1,0 +1,56 @@
+{
+  "Main" : {
+    "title" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "heading1, heading2, heading3, heading4, heading5, heading6",
+        "label" : "Title"
+      }
+    },
+    "body" : {
+      "type" : "Slices",
+      "fieldset" : "Slice zone",
+      "config" : {
+        "choices" : {
+          "featured_article" : {
+            "type" : "Slice",
+            "fieldset" : "Featured Article",
+            "description" : "Featured Article",
+            "icon" : "star_border",
+            "display" : "list",
+            "non-repeat" : {
+              "post" : {
+                "type" : "Link",
+                "config" : {
+                  "select" : "document",
+                  "customtypes" : [ "blog_post" ],
+                  "label" : "Post",
+                  "placeholder" : "Pick featured post"
+                }
+              }
+            },
+            "repeat" : { }
+          },
+          "wall" : {
+            "type" : "Slice",
+            "fieldset" : "Wall",
+            "description" : "Wall",
+            "icon" : "account_balance_wallet",
+            "display" : "list",
+            "non-repeat" : {
+              "number_of_posts" : {
+                "type" : "Number",
+                "config" : {
+                  "label" : "Number of posts",
+                  "placeholder" : "Number of posts"
+                }
+              }
+            },
+            "repeat" : { }
+          }
+        }
+      }
+    }
+  },
+  "Right column" : { }
+}
